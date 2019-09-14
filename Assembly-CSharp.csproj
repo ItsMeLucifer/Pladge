@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\bulleto.cs" />
     <Compile Include="Assets\Skrypty\czarnadziura.cs" />
     <Compile Include="Assets\Skrypty\enemy.cs" />
     <Compile Include="Assets\Skrypty\HealthBar.cs" />
