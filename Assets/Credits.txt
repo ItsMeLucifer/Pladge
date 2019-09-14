@@ -1,0 +1,8 @@
+Credits:
+Author - Patryk Bożek [Jocs Team]
+Music - Michał Kuls [Jocs Team]
+English Version - Jakub Ka [Jocs Team]
+Tester - Aleksander Fober [Jocs Team]
+Assets:
+"Enemy Game Character - Rock Monster" by bevouliin.com licensed CC0 1.0: https://opengameart.org/content/enemy-game-character-rock-monster
+
