@@ -9,13 +9,12 @@ public class enemy : MonoBehaviour
     public float speedo = 0.1f;
     bool pow = true;
     public float rotation;
-    int zakres=0;
     public int random;
 
     void Start()
     {
         monster.transform.localScale = new Vector3(0, 0, 0);
-        InvokeRepeating("Atak", 2.0f, 0.5f);
+        InvokeRepeating("Atak", 2.0f, 0.1f);
     }
 
     void Update()
@@ -41,20 +40,15 @@ public class enemy : MonoBehaviour
         {
             pow = false;
         }
-        //STRZALY SKALNE
-        
-        
-        
     }
     public GameObject rockbullet;
     public Transform firepoint;
     void Atak()
     {
-        //NO KURWA MAC NIE WIEM JAK ZROBIC ABY KURWA RANDOMOWO DO CHUJA WYBIERALO KĄT WYSTRZAŁU, NO JEBNE ZARAZ
         System.Random rand = new System.Random();
-        random = rand.Next(360);
-        Quaternion qua = new Quaternion(0,0, random,0);
-        Instantiate(rockbullet, firepoint.position, qua);//KURWA TUTAJ< 3 ZMIENNA W NAWIASIE MUSI BYC JAKIMS JEBANYM QUATERNIONEM NO JA PIERDOLE ZAJEBIEKOMUS ZARAZ, JAK SIE ZTEGO GOWNA KORZYSTA
-        //CHCE TYLKO ABY ZMIENNA RANDOM BYLA KURWA W ROTACJI Z, TAK KURWA TRUDNO?
+            random = rand.Next(360);
+            firepoint.transform.Rotate(0, 0, random);
+            Instantiate(rockbullet, firepoint.position, firepoint.rotation);
+
     }
 }

@@ -64,7 +64,7 @@ public class ruch : MonoBehaviour
             if (plat.transform.position.x > 2.18f && plat.transform.position.y < 0 && poziomy == true)
             {
                 plat.transform.Rotate(0, 0, -90, Space.Self);
-                plat.transform.position = new Vector3(2.691f, -4.3f, 0f);
+                plat.transform.position = new Vector3(2.9f, -4.3f, 0f);
                 poziomy = false;
                 speed = Math.Abs(speed);
             }
@@ -80,7 +80,7 @@ public class ruch : MonoBehaviour
             if (plat.transform.position.x < -2.17f && plat.transform.position.y > 0 && poziomy == true)
             {
                 plat.transform.Rotate(0, 0, -90, Space.Self);
-                plat.transform.position = new Vector3(-2.701f, 4.362f, 0f);
+                plat.transform.position = new Vector3(-2.88f, 4.362f, 0f);
                 poziomy = false;
                 speed = Math.Abs(speed) * -1;
             }
@@ -91,7 +91,7 @@ public class ruch : MonoBehaviour
             if (plat.transform.position.x < -2.17f && plat.transform.position.y < 0 && poziomy == true)
             {
                 plat.transform.Rotate(0, 0, -90, Space.Self);
-                plat.transform.position = new Vector3(-2.691f, -4.357f, 0f);
+                plat.transform.position = new Vector3(-2.88f, -4.357f, 0f);
                 poziomy = false;
                 speed = Math.Abs(speed);
             }
@@ -107,7 +107,7 @@ public class ruch : MonoBehaviour
             if (plat.transform.position.x > 2.19 && plat.transform.position.y > 0 && poziomy == true)
             {
                 plat.transform.Rotate(0, 0, -90, Space.Self);
-                plat.transform.position = new Vector3(2.701f, 4.362f, 0f);
+                plat.transform.position = new Vector3(2.9f, 4.362f, 0f);
                 poziomy = false;
                 speed = Math.Abs(speed) * -1;
             }

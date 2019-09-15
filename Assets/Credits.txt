@@ -1,8 +1,12 @@
 Credits:
-Author - Patryk Bożek [Jocs Team]
+Authors: Patryk Bożek [Jocs Team] & Michał Wnuczyński
 Music - Michał Kuls [Jocs Team]
 English Version - Jakub Ka [Jocs Team]
 Tester - Aleksander Fober [Jocs Team]
 Assets:
 "Enemy Game Character - Rock Monster" by bevouliin.com licensed CC0 1.0: https://opengameart.org/content/enemy-game-character-rock-monster
+"Sci-Fi Blue Pillar" by FunwithPixels licensed CC-BY 4.0, CC-BY 3.0: https://opengameart.org/content/sci-fi-blue-pillar
+"Gold Coin" by WarmGuy licensed CC-BY 3.0: https://opengameart.org/content/gold-coin-2
+"Space background" by Cuzco licensed CC0: https://opengameart.org/content/space-background
+
 

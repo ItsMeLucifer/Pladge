@@ -5,7 +5,6 @@ using UnityEngine;
 public class HealthBar : MonoBehaviour
 {
     public GameObject bar;
-    public GameObject rock;
     public GameObject text;
     public GameObject czerw;
     public int health=100;
@@ -15,5 +14,14 @@ public class HealthBar : MonoBehaviour
     }
     void Update()
     {
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+    void Die()
+    {
+        Destroy(GameObject.Find("platforma"));
+        //IDZ DO SCENY GAMEOVER
     }
 }

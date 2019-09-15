@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bulleto : MonoBehaviour
 {
-    public float speed = 20f;
+    public float speed = 10f;
     public int damage = 10;
     public Rigidbody2D rb;
     void Start()
