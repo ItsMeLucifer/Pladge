@@ -22,7 +22,7 @@ public class Sklep : MonoBehaviour
             {
                 if (raycastHit.collider.name == "coin")
                 {
-                    SceneManager.LoadScene(1);
+                    SceneManager.LoadScene("Sklep");
                 }
             }
         }
