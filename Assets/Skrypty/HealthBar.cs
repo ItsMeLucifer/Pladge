@@ -18,6 +18,7 @@ public class HealthBar : MonoBehaviour
         {
             Die();
         }
+        
     }
     void Die()
     {
