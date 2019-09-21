@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class bulleto : MonoBehaviour
 {
     public float speed = 10f;
     public int damage = 10;
-    public GameObject czerw;
     public Rigidbody2D rb;
     void Start()
     {
@@ -17,8 +17,12 @@ public class bulleto : MonoBehaviour
         if (hitInfo.name == "platforma")
         {
             GameObject.Find("LifeBar").GetComponent<HealthBar>().health-=damage;
-            czerw.transform.localScale = new Vector3(czerw.transform.localScale.x * (GameObject.Find("LifeBar").GetComponent<HealthBar>().health / 100), 0, 0);
+            GameObject.Find("LifeBar").GetComponent<HealthBar>().ZmianaZycia();
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        if (hitInfo.gameObject.tag =="Sciana")
+        {
+            Destroy(gameObject);
+        }
     }
 }

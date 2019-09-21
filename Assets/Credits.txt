@@ -8,5 +8,6 @@ Assets:
 "Sci-Fi Blue Pillar" by FunwithPixels licensed CC-BY 4.0, CC-BY 3.0: https://opengameart.org/content/sci-fi-blue-pillar
 "Gold Coin" by WarmGuy licensed CC-BY 3.0: https://opengameart.org/content/gold-coin-2
 "Space background" by Cuzco licensed CC0: https://opengameart.org/content/space-background
-Menu BACKGROUND by Diego PH https://unsplash.com/photos/5LOhydOtTKU
+"Menu BACKGROUND" by Diego PH: https://unsplash.com/photos/5LOhydOtTKU
+"RPG Coins Set" by LoversHorizon licensed CC-BY-SA 3.0: https://opengameart.org/content/rpg-coins-set
 

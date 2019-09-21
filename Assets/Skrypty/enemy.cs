@@ -10,11 +10,19 @@ public class enemy : MonoBehaviour
     bool pow = true;
     public float rotation;
     public int random;
-
+    public float bulletHz=0.1f;
+    public float coinHz = 3f;
+    public GameObject rockbullet;
+    public Transform firepoint;
+    public Transform coinspawnpoint;
+    public GameObject coin;
+    readonly System.Random rand = new System.Random();
     void Start()
     {
+        coinHz = rand.Next(5)+5;
         monster.transform.localScale = new Vector3(0, 0, 0);
-        InvokeRepeating("Atak", 2.0f, 0.1f);
+        InvokeRepeating("Atak", 2.5f, bulletHz);
+        InvokeRepeating("Coins", 2f, coinHz);
     }
 
     void Update()
@@ -41,14 +49,18 @@ public class enemy : MonoBehaviour
             pow = false;
         }
     }
-    public GameObject rockbullet;
-    public Transform firepoint;
     void Atak()
     {
-        System.Random rand = new System.Random();
             random = rand.Next(360);
             firepoint.transform.Rotate(0, 0, random);
             Instantiate(rockbullet, firepoint.position, firepoint.rotation);
+
+    }
+    void Coins()
+    {
+        random = rand.Next(360);
+        coinspawnpoint.transform.Rotate(0, 0, random);
+        Instantiate(coin, coinspawnpoint.position, coinspawnpoint.rotation);
 
     }
 }
