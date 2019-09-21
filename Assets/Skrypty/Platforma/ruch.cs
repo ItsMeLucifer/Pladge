@@ -6,6 +6,7 @@ using System;
 public class ruch : MonoBehaviour
 {
     public float speed = 0.05f;
+    public float predkosc = 0.05f;
     public GameObject plat;
     public bool prawo = true;
     public bool poziomy = false;
@@ -14,9 +15,12 @@ public class ruch : MonoBehaviour
     {
         poziomy = true;
         prawo = true;
+        speed *= Time.timeScale;
     }
     void Update()
     {
+        if (Time.timeScale == 0)
+            return;
 
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
@@ -28,7 +32,7 @@ public class ruch : MonoBehaviour
             {
                 prawo = true;
             }
-            speed *= -1;
+            speed *= -1 * Time.timeScale;
         }
         if (Input.GetMouseButtonDown(0))
         {
@@ -40,7 +44,7 @@ public class ruch : MonoBehaviour
             {
                 prawo = true;
             }
-            speed *= -1;
+            speed *= -1 * Time.timeScale;
         }
         if (poziomy == true)
         {
