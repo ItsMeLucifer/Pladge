@@ -15,9 +15,8 @@ public class CoinSpawner : MonoBehaviour
     {
         if (hitInfo.name == "platforma")
         {
-            //GameObject.Find("LifeBar").GetComponent<HealthBar>().health -= damage;
-            //GameObject.Find("LifeBar").GetComponent<HealthBar>().ZmianaZycia();
-            //DODANIE HAJSU
+            GameObject.Find("TextHajs").GetComponent<HajsWyswietlanko>().hajs += ile;
+            GameObject.Find("TextHajs").GetComponent<HajsWyswietlanko>().Income();
             Destroy(gameObject);
         }
         if (hitInfo.gameObject.tag == "Sciana")

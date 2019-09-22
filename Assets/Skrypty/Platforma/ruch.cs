@@ -6,11 +6,11 @@ using System;
 public class ruch : MonoBehaviour
 {
     public float speed = 0.05f;
-    public float predkosc = 0.05f;
     public GameObject plat;
     public bool prawo = true;
     public bool poziomy = false;
     public static ruch instace;
+    public float CzasDzialaniaPerkaSzybkosc=5f;
     void Start()
     {
         poziomy = true;
@@ -125,4 +125,14 @@ public class ruch : MonoBehaviour
             }
         }
     }
+    public void PerekSzybkosc(int rand)
+    {
+        speed += (speed / 4) * rand;
+        //ExecuteAfterTime(rand);
+    }
+    /*IEnumerator ExecuteAfterTime(int rand)
+    {
+        yield return new WaitForSeconds(CzasDzialaniaPerkaSzybkosc);
+        speed += (speed / 4) * -rand;
+    }*/
 }

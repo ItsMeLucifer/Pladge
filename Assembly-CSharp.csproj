@@ -67,9 +67,11 @@
     <Compile Include="Assets\PauseScript.cs" />
     <Compile Include="Assets\Skrypty\czarnadziura.cs" />
     <Compile Include="Assets\Skrypty\enemy.cs" />
+    <Compile Include="Assets\Skrypty\HajsWyswietlanko.cs" />
     <Compile Include="Assets\Skrypty\HealthBar.cs" />
     <Compile Include="Assets\Skrypty\MENU_Scripts\MainMenu.cs" />
     <Compile Include="Assets\Skrypty\PAUSEscript.cs" />
+    <Compile Include="Assets\Skrypty\PerkiCzasowe\Szybkosc.cs" />
     <Compile Include="Assets\Skrypty\Platforma\ruch.cs" />
     <Compile Include="Assets\Skrypty\Sklep.cs" />
     <Compile Include="Assets\Skrypty\Tlo\animacjatlo.cs" />

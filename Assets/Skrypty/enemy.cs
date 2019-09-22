@@ -12,10 +12,13 @@ public class enemy : MonoBehaviour
     public int random;
     public float bulletHz=0.1f;
     public float coinHz = 3f;
+    public float perekHz = 10f;
     public GameObject rockbullet;
     public Transform firepoint;
     public Transform coinspawnpoint;
+    public Transform perekpoint;
     public GameObject coin;
+    public GameObject perekS;
     readonly System.Random rand = new System.Random();
     void Start()
     {
@@ -23,6 +26,7 @@ public class enemy : MonoBehaviour
         monster.transform.localScale = new Vector3(0, 0, 0);
         InvokeRepeating("Atak", 2.5f, bulletHz);
         InvokeRepeating("Coins", 2f, coinHz);
+        InvokeRepeating("Perek", 3f, perekHz);
     }
 
     void Update()
@@ -62,5 +66,11 @@ public class enemy : MonoBehaviour
         coinspawnpoint.transform.Rotate(0, 0, random);
         Instantiate(coin, coinspawnpoint.position, coinspawnpoint.rotation);
 
+    }
+    void Perek()
+    {
+        random = rand.Next(360);
+        perekpoint.transform.Rotate(0, 0, random);
+        Instantiate(perekS, perekpoint.position, perekpoint.rotation);
     }
 }
