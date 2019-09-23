@@ -10,7 +10,8 @@ public class ruch : MonoBehaviour
     public bool prawo = true;
     public bool poziomy = false;
     public static ruch instace;
-    public float CzasDzialaniaPerkaSzybkosc=5f;
+    public float CzasDzialaniaPerkaSzybkosc = 5f;
+    float podstawowapredkosc;
     void Start()
     {
         poziomy = true;
@@ -127,12 +128,19 @@ public class ruch : MonoBehaviour
     }
     public void PerekSzybkosc(int rand)
     {
+        podstawowapredkosc = speed;
         speed += (speed / 4) * rand;
-        //ExecuteAfterTime(rand);
+
     }
-    /*IEnumerator ExecuteAfterTime(int rand)
+    public void KoniecPerekSzybkosc()
     {
-        yield return new WaitForSeconds(CzasDzialaniaPerkaSzybkosc);
-        speed += (speed / 4) * -rand;
-    }*/
+        if (speed > 0)
+        {
+            speed = Math.Abs(podstawowapredkosc);
+        }
+        else
+        {
+            speed = -Math.Abs(podstawowapredkosc);
+        }
+    }
 }

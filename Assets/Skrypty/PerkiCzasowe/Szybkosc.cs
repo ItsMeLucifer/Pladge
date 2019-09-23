@@ -29,9 +29,11 @@ public class Szybkosc : MonoBehaviour
             {
                 GameObject.Find("platforma").GetComponent<ruch>().PerekSzybkosc(1);
             }
-            //POKAZANIE SIE LICZNIKA NA SRODKU EKRANU Z DLUGOSCIA DZIALANIA PERKA SZYBKOSCI.
-            //STWORZYC SKRYPT DLA TEGO LICZNIKA, W KTORYM ( GDY CZAS SIE SKONCZY ) ODPALI SIE FUNKCJA, KTORA PRZYWROCI PODSTAWOWA PREDKOSC PLATFORMIE
-            //LICZNIK BEDZIE UNIWERSALNY, CO SEKUNDE BEDZIE ZMNIEJSZAL SWOJE SKALOWANIE O 1/N, GDZIE 'N' TO CZAS PODANY WYŻEJ, KTORY OKRESLA DLUGOSC DZIALANIA PERKA
+            //Chce zrobic te jebane dwa obiekty niewidzialne, dopoki nie odpali się perek szybkosc ale chuja z tego wychodzi ja pierdoleeelelellele
+           // GameObject.Find("PurpleCoin").SetActive(true);
+          //  GameObject.Find("redperek").SetActive(true);
+            GameObject.Find("redperek").GetComponent<PerekCzasAnim>().CzasDzalaniaPerka = Czas;
+            GameObject.Find("redperek").GetComponent<PerekCzasAnim>().StartOdliczania();
             Destroy(gameObject);
         }
         if (hitInfo.gameObject.tag == "Sciana")

@@ -11,6 +11,11 @@ public class HajsWyswietlanko : MonoBehaviour
     void Start()
     {
         hajstxt = GameObject.Find("TextHajs").GetComponent<Text>();
+        //DontDestroyOnLoad(hajstxt);
+        //Chuj wie, generalnie chcialem zrobic aby nie usuwalo jebanego TextHajsu przy ladowaniu nowej sceny
+        //Abym mógł w SklepHajsWYswietlanko.skrypt odniesc się do TextHajs z tej Sceny.
+        //Ale coś za chuj nie działa xD
+        //w SKLEPHAJSWYSWIETLANKO.SKRYPT MASZ TEZ KOMENTARZ
     }
     void Update()
     {

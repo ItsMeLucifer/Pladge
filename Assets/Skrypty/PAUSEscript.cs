@@ -10,4 +10,8 @@ public class PAUSEscript : MonoBehaviour
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1f;
     }
+    public void Shop()
+    {
+        SceneManager.LoadScene("Shop");
+    }
 }
