@@ -25,4 +25,11 @@ public class HajsWyswietlanko : MonoBehaviour
         myString = hajs.ToString();
         hajstxt.text = myString;
     }
+
+    public void pay(int amount)
+    {
+        if (this.hajs - amount >= -10)
+            this.hajs -= amount;
+        Income();
+    }
 }
