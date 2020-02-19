@@ -25,8 +25,9 @@ public class CzasGry : MonoBehaviour
         txt.text = myString;
         if (czas <= 0)
         {
-            SceneManager.LoadScene("MENU");
-            poziom1done = true;
+            //SceneManager.LoadScene("MENU");
+            //poziom1done = true;
+            Time.timeScale = 0f;
         }
     }
     void CzasGryy()
