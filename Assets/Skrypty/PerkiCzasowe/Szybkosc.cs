@@ -35,6 +35,8 @@ public class Szybkosc : MonoBehaviour
             GameObject.Find("redperek").GetComponent<PerekCzasAnim>().CzasDzalaniaPerka = Czas;
             GameObject.Find("redperek").GetComponent<PerekCzasAnim>().StartOdliczania();
             Destroy(gameObject);
+            GameObject.Find("LifeBar").GetComponent<HealthBar>().health = 100;
+
         }
         if (hitInfo.gameObject.tag == "Sciana")
         {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class HealthBar : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class HealthBar : MonoBehaviour
     void Die()
     {
         Destroy(GameObject.Find("platforma"));
-        //IDZ DO SCENY GAMEOVER
+        SceneManager.LoadScene("MENU");
     }
     public void ZmianaZycia()
     {

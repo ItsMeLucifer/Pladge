@@ -5,6 +5,8 @@ using System;
 
 public class enemy : MonoBehaviour
 {
+    public GameObject pasekzycia;
+    public int zyciepotwora = 200;
     public GameObject monster;
     public float speedo = 0.1f;
     bool pow = true;
@@ -27,6 +29,7 @@ public class enemy : MonoBehaviour
         InvokeRepeating("Atak", 2.5f, bulletHz);
         InvokeRepeating("Coins", 2f, coinHz);
         InvokeRepeating("Perek", 3f, perekHz);
+        InvokeRepeating("Czas", 0, 1f);
     }
 
     void Update()
@@ -52,6 +55,7 @@ public class enemy : MonoBehaviour
         {
             pow = false;
         }
+        pasekzycia.transform.localScale = new Vector3(zyciepotwora / 1000,pasekzycia.transform.localScale.y,pasekzycia.transform.localScale.z);
     }
     void Atak()
     {
@@ -72,5 +76,9 @@ public class enemy : MonoBehaviour
         random = rand.Next(360);
         perekpoint.transform.Rotate(0, 0, random);
         Instantiate(perekS, perekpoint.position, perekpoint.rotation);
+    }
+    void Czas()
+    {
+        zyciepotwora--;
     }
 }
