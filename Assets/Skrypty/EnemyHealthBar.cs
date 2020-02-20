@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class EnemyHealthBar : MonoBehaviour
 {
-    private Transform bar;
+    public Transform bar;
 
-    private float hp = -.99f;
+    public GameObject plat;
+
+    public float hp = -1.01f;
 
     private void Start()
     {
-        bar = transform.Find("Bar");
-        //bar.localScale = new Vector3(-.4f, 1f);
         InvokeRepeating("SetSize", 0, 2f);
     }
     
@@ -20,8 +20,13 @@ public class EnemyHealthBar : MonoBehaviour
     {
         if (hp >= 0f)
         {
+            plat.GetComponent<SaveLoad>().points += 1000f;
+            plat.GetComponent<SaveLoad>().points += GameObject.Find("LifeBar").GetComponent<HealthBar>().health*300;
+            plat.GetComponent<SaveLoad>().Dodaj();
+            plat.GetComponent<SaveLoad>().Save();
             SceneManager.LoadScene("Zakonczenie");
         }
+        bar.localScale = new Vector3(hp, 1f);
     }
     public void SetSize()
     {

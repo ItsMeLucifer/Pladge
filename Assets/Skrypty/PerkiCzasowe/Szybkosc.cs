@@ -8,6 +8,7 @@ public class Szybkosc : MonoBehaviour
     public float speed = 10f;
     public int boost = 10;
     public float Czas = 5f;
+    public GameObject redperek;
     int random;
     public Rigidbody2D rb;
     readonly System.Random rand = new System.Random();

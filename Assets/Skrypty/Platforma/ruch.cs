@@ -68,7 +68,7 @@ public class ruch : MonoBehaviour
             //Dolna Platforma, Ruch w Prawo [PRAWY DOLNY RÓG] 
             if (plat.transform.position.x > 2.18f && plat.transform.position.y < 0 && poziomy == true)
             {
-                plat.transform.Rotate(0, 0, -90, Space.Self);
+                plat.transform.Rotate(0, 0, 90, Space.Self);
                 plat.transform.position = new Vector3(2.9f, -4.3f, 0f);
                 poziomy = false;
                 speed = Math.Abs(speed);
@@ -84,7 +84,7 @@ public class ruch : MonoBehaviour
             //Górna Platforma, Ruch w Lewo [LEWY GÓRNY RÓG]
             if (plat.transform.position.x < -2.17f && plat.transform.position.y > 0 && poziomy == true)
             {
-                plat.transform.Rotate(0, 0, -90, Space.Self);
+                plat.transform.Rotate(0, 0, 90, Space.Self);
                 plat.transform.position = new Vector3(-2.88f, 4.362f, 0f);
                 poziomy = false;
                 speed = Math.Abs(speed) * -1;
@@ -103,7 +103,7 @@ public class ruch : MonoBehaviour
             //Lewa Ściana, Ruch w Górę [LEWY GÓRNY RÓG]
             if (plat.transform.position.x < 0 && plat.transform.position.y > 4.37f && poziomy == false)
             {
-                plat.transform.Rotate(0, 0, 90, Space.Self);
+                plat.transform.Rotate(0, 0, -90, Space.Self);
                 plat.transform.position = new Vector3(-2.173f, 4.882f, 0f);
                 poziomy = true;
                 speed = Math.Abs(speed);
@@ -119,7 +119,7 @@ public class ruch : MonoBehaviour
             //Prawa Ściana, Ruch w Dół [PRAWY DOLNY RÓG]
             if (plat.transform.position.x > 0 && plat.transform.position.y < -4.37f && poziomy == false)
             {
-                plat.transform.Rotate(0, 0, 90, Space.Self);
+                plat.transform.Rotate(0, 0, -90, Space.Self);
                 plat.transform.position = new Vector3(2.177f, -4.885f, 0f);
                 poziomy = true;
                 speed = Math.Abs(speed) * -1;

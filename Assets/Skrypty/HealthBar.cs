@@ -7,15 +7,14 @@ using UnityEngine.SceneManagement;
 
 public class HealthBar : MonoBehaviour
 {
-    public GameObject bar;
     public Text txt;
-    public GameObject czerw;
-    public int health;
+    public GameObject bar;
+    public float health = 100;
     public bulleto dmg;
     void Start()
     {
-        this.health = 100;
-        czerw.transform.localScale = new Vector3(0.5388281f, 0.1413281f, 1);
+        //this.health = 100;
+        //czerw.transform.localScale = new Vector3(0.5388281f, 0.1413281f, 1);
         txt = GameObject.Find("procentyzycia").GetComponent<Text>();
     }
     void Update()
@@ -25,20 +24,23 @@ public class HealthBar : MonoBehaviour
             health = 0;
             Die();
         }
-        
+
+        bar.transform.localScale = new Vector3(health / 100, 1, 1);
+        txt.text = health + "%";
+
     }
     void Die()
     {
         Destroy(GameObject.Find("platforma"));
         SceneManager.LoadScene("MENU");
     }
-    public void ZmianaZycia()
+    /*public void ZmianaZycia()
     {
-        czerw.transform.localScale = new Vector3(0.5388281f * (health / 100f), 0.1413281f, 1);
-        czerw.transform.position -= new Vector3(dmg.damage* 0.008f, 0f, 0f); 
+        //czerw.transform.localScale = new Vector3(0.5388281f * (health / 100f), 0.1413281f, 1);
+        //czerw.transform.position -= new Vector3(dmg.damage* 0.008f, 0f, 0f); 
         //^dzieki temu, nawet jak zmienisz zadawany dmg, to czerwony pasek bedzie zawsze w tym samym miejscu xD
         txt.text = health + "%";
-    }
+    }*/
 
     public void BuyHealth()
     {

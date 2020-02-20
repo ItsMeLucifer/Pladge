@@ -7,13 +7,15 @@ using UnityEngine.SceneManagement;
 public class CzasGry : MonoBehaviour
 {
     Text txt;
-    bool poziom1done = false;
-    int czas = 60;
+    public int czas = 30;
     string myString;
+    public GameObject plansza;
     // Start is called before the first frame update
     void Start()
     {
+        plansza = GameObject.Find("CzarnaPlansza");
         txt = GameObject.Find("TextCzasGry").GetComponent<Text>();
+        plansza.SetActive(false);
         InvokeRepeating("CzasGryy", 0, 1f);
     }
 
@@ -28,6 +30,8 @@ public class CzasGry : MonoBehaviour
             //SceneManager.LoadScene("MENU");
             //poziom1done = true;
             Time.timeScale = 0f;
+            Destroy(GameObject.Find("TextCzasGry"));
+            plansza.SetActive(true);
         }
     }
     void CzasGryy()

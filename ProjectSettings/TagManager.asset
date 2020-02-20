@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Sciana
   - AnimacjaPerekSzybkosciCzas
+  - enemy
   layers:
   - Default
   - TransparentFX
