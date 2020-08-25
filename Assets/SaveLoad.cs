@@ -7,6 +7,7 @@ public class SaveLoad : MonoBehaviour
 {
     public GameObject platforma;
     public GameObject enemyHealth;
+    public GameObject menu;
     public Text coins;
     public GameObject lifebar;
     public GameObject CzasGry;
@@ -17,15 +18,25 @@ public class SaveLoad : MonoBehaviour
     private Vector3 playerRotation;
     private int czasgiery;
     public float points;
+    private int option;
+    void Awake()
+    {
+        menu = GameObject.Find("MainMenu");
+        if (menu.GetComponent<MainMenu>().opcja == 1)
+        {
+            option = 1;
+        }
+        Destroy(GameObject.Find("CanvasMainMenu"));
+    }
     void Start()
     {
         InvokeRepeating("Save", 0, 10f);
         InvokeRepeating("Points", 0, 1f);
-        if (PlayerPrefs.GetFloat("enemyHealth") < -0.5f)
+        if (option == 1 && PlayerPrefs.GetFloat("enemyHealth") < -0.5)
         {
             Load();
         }
-        DontDestroyOnLoad(gameObject);
+
     }
     
     private void Points()
@@ -52,9 +63,6 @@ public class SaveLoad : MonoBehaviour
             czasgiery = -1;
             PlayerPrefs.SetInt("gameTime", czasgiery);
         }
-        PlayerPrefs.SetFloat("playerPositionX", playerPosition.x);
-        PlayerPrefs.SetFloat("playerPositionY", playerPosition.y);
-        PlayerPrefs.SetFloat("playerRotationZ", playerRotation.z);
         PlayerPrefs.SetFloat("enemyHealth", zycieprzeciwnika);
         PlayerPrefs.SetInt("playerCoins", monety);
         PlayerPrefs.SetFloat("playerLife", zycie);
@@ -63,10 +71,6 @@ public class SaveLoad : MonoBehaviour
     }
     private void Load()
     {
-        Vector3 playerposition = new Vector3(PlayerPrefs.GetFloat("playerPositionX"),PlayerPrefs.GetFloat("playerPositionY"),0);
-        platforma.transform.position = playerposition;
-        platforma.transform.eulerAngles = new Vector3(0,0,(int)PlayerPrefs.GetFloat("playerRotationZ"));
-        platforma.transform.Rotate(0, 0, -90);
         enemyHealth.GetComponent<EnemyHealthBar>().hp = PlayerPrefs.GetFloat("enemyHealth");
         coins.GetComponent<HajsWyswietlanko>().hajs = PlayerPrefs.GetInt("playerCoins");
         lifebar.GetComponent<HealthBar>().health = PlayerPrefs.GetFloat("playerLife");

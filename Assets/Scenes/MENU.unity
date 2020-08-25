@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 168429303}
   - component: {fileID: 168429302}
   m_Layer: 5
-  m_Name: OptionsButton
+  m_Name: LoadButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -378,20 +378,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478541533}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 602772522}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 602772524}
+        m_MethodName: LoadMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -449,7 +438,7 @@ GameObject:
   - component: {fileID: 195732340}
   - component: {fileID: 195732339}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasMainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1123,7 +1112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.85, y: 110.95}
+  m_AnchoredPosition: {x: 1, y: 110.95}
   m_SizeDelta: {x: 478.3, y: 72.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &525002912
@@ -1144,7 +1133,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Patryk Bo\u017Cek, Micha\u0142 Wnuczy\u0144ski"
+  m_text: "Patryk Bo\u017Cek"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1173,14 +1162,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 28.2
-  m_fontSizeBase: 28.2
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_textAlignment: 257
+  m_textAlignment: 258
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -1301,17 +1290,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Lorem Ipsum jest tekstem stosowanym jako przyk\u0142adowy wype\u0142niacz
-    w przemy\u015Ble poligraficznym. Zosta\u0142 po raz pierwszy u\u017Cyty w XV w.
-    przez nieznanego drukarza do wype\u0142nienia tekstem pr\xF3bnej ksi\u0105\u017Cki.
-    Pi\u0119\u0107 wiek\xF3w p\xF3\u017Aniej zacz\u0105\u0142 by\u0107 u\u017Cywany
-    przemy\u015Ble elektronicznym, pozostaj\u0105c praktycznie niezmienionym. Spopularyzowa\u0142
-    si\u0119 w latach 60. XX w. wraz z publikacj\u0105 arkuszy Letrasetu, zawieraj\u0105cych
-    fragmenty Lorem Ipsum, a ostatnio z zawieraj\u0105cym r\xF3\u017Cne wersje Lorem
-    Ipsum oprogramowaniem przeznaczonym do realizacji druk\xF3w na komputerach osobistych,
-    jak Aldus PageMaker. Lorem Ipsum jest tekstem stosowanym jako przyk\u0142adowy
-    wype\u0142niacz w przemy\u015Ble poligraficznym. Zosta\u0142 po raz pierwszy u\u017Cyty
-    w XV w. przez nieznanego drukarza do wype\u0142nienia tekstem pr\xF3bnej ksi\u0105\u017Cki"
+  m_text: "Gra Pladge polega na poruszaniu s\u0105 platform\u0105 (naszym bohaterem)
+    po obrze\u017Cach ekranu. Celem gry jest pokonanie potwora Skalniaka zjaduj\u0105cego
+    si\u0119 na \u015Brodku ekranu. \u017Bycie Skalniaka spada wraz z czasem. Pierwszy
+    rozdzia\u0142 gry polega na wytrzymaniu 60s, (przezkadza\u0107 w tym b\u0119dzie
+    nam ogromna ilo\u015B\u0107 pocisk\xF3w wystrzeliwana w ka\u017Cd\u0105 mo\u017Cliw\u0105
+    stron\u0119). Wraz z pociskami, Skalniak mo\u017Ce wypuszcza\u0107 z\u0142ote
+    monety (kt\xF3re znacz\u0105co podwy\u017Cczaj\u0105 ilo\u015B\u0107 ko\u0144cowych
+    punkt\xF3w), jak i perki szybko\u015Bci (kt\xF3re na sta\u0142e przy\u015Bpiesz\u0105/spowolni\u0105
+    gracza o ma\u0142\u0105 liczb\u0119 punkt\xF3w). W drugim rozdziale, gracz otrzymuje
+    automatyczn\u0105 umiej\u0119tno\u015B\u0107 - strzelanie. Dzi\u0119ki czemu b\u0119dzie
+    m\xF3g\u0142 przy\u015Bpieszy\u0107 pokonanie potwora."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1340,14 +1329,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 14.2
-  m_fontSizeBase: 14.2
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_textAlignment: 257
+  m_textAlignment: 258
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -1465,6 +1454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cba9e5901dab9b146aa4545f0dbe0bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 195732338}
+  opcja: 0
 --- !u!1 &768806518
 GameObject:
   m_ObjectHideFlags: 0
@@ -3146,9 +3137,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'PLAY
-
-'
+  m_text: NEW GAME
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3177,14 +3166,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 76.6
-  m_fontSizeBase: 76.6
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_textAlignment: 257
+  m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -3194,7 +3183,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -3215,13 +3204,13 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -44.519836, y: 0, z: -39.57315, w: 0}
   m_textInfo:
     textComponent: {fileID: 1568040686}
-    characterCount: 5
+    characterCount: 8
     spriteCount: 0
     spaceCount: 1
-    wordCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -4006,7 +3995,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.7, y: -16.7}
+  m_AnchoredPosition: {x: 0.000002861, y: -1.25}
   m_SizeDelta: {x: 281.8, y: 94.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2135619222
@@ -4027,9 +4016,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'OPTIONS
-
-'
+  m_text: LOAD GAME
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4058,14 +4045,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 54
-  m_fontSizeBase: 54
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_textAlignment: 257
+  m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -4099,10 +4086,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2135619222}
-    characterCount: 8
+    characterCount: 9
     spriteCount: 0
     spaceCount: 1
-    wordCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1

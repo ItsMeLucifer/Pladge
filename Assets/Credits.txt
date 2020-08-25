@@ -8,4 +8,5 @@ Assets:
 "Menu BACKGROUND" by Diego PH: https://unsplash.com/photos/5LOhydOtTKU
 "RPG Coins Set" by LoversHorizon licensed CC-BY-SA 3.0: https://opengameart.org/content/rpg-coins-set
 "Bullet Collection 1" by Master484 licensed CC0: https://opengameart.org/content/bullet-collection-1-m484
-
+"Free buttons GUI Pack 1" by fakigame licensed CC-BY 4.0:
+https://opengameart.org/content/free-buttons-gui-pack-1

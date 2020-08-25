@@ -5,20 +5,17 @@ using UnityEngine.UI;
 
 public class HajsWyswietlanko : MonoBehaviour
 {
-    Text hajstxt;
+    public Text hajstxt;
+    public GameObject coin;
     public int hajs;
     string myString;
-    void Start()
-    {
-        hajstxt = GameObject.Find("TextHajs").GetComponent<Text>();
-        //DontDestroyOnLoad(hajstxt);
-        //Chuj wie, generalnie chcialem zrobic aby nie usuwalo jebanego TextHajsu przy ladowaniu nowej sceny
-        //Abym mógł w SklepHajsWYswietlanko.skrypt odniesc się do TextHajs z tej Sceny.
-        //Ale coś za chuj nie działa xD
-        //w SKLEPHAJSWYSWIETLANKO.SKRYPT MASZ TEZ KOMENTARZ
-    }
     void Update()
     {
+        if (PlayerPrefs.HasKey("coins"))
+        {
+            hajs = PlayerPrefs.GetInt("coins");
+            Income();
+        }
     }
     public void Income()
     {

@@ -7,12 +7,13 @@ using UnityEngine.SceneManagement;
 public class CzasGry : MonoBehaviour
 {
     Text txt;
-    public int czas = 30;
+    public int czas = 60;
     string myString;
     public GameObject plansza;
     // Start is called before the first frame update
     void Start()
     {
+        czas = 60;
         plansza = GameObject.Find("CzarnaPlansza");
         txt = GameObject.Find("TextCzasGry").GetComponent<Text>();
         plansza.SetActive(false);

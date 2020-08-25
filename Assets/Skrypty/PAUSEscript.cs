@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PAUSEscript : MonoBehaviour
 {
+    int coins;
     public void GoBackToMenu()
     {
         SceneManager.LoadScene("Menu");
@@ -12,6 +13,10 @@ public class PAUSEscript : MonoBehaviour
     }
     public void Shop()
     {
+        coins = GameObject.Find("TextHajs").GetComponent<HajsWyswietlanko>().hajs;
+        PlayerPrefs.SetInt("coins", coins);
         SceneManager.LoadScene("Shop");
+        //Time.timeScale = 0f;
+        GameObject.Find("platforma").GetComponent<PauseScript>().Pause(true);
     }
 }
